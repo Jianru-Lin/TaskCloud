@@ -1,0 +1,97 @@
+html
+	head
+		meta http-equiv=Content-Type content=text/html;charset=UTF-8
+		meta name=viewport content=width=device-width,initial-scale=1.0
+		title | 页面操作自动化
+		script src=wp-fix.js type=text/javascript
+		script src=jquery-1.10.2.min.js type=text/javascript
+		link href=bootstrap/css/bootstrap.min.css rel=stylesheet media=screen
+		link href=bootstrap/css/bootstrap-responsive.min.css rel=stylesheet media=screen
+		script src=bootstrap/js/bootstrap.min.js type=text/javascript
+		link href=css/index.css rel=stylesheet
+		script src=auto-refresh.js type=text/javascript
+		script src=js/request.js type=text/javascript
+		script src=js/index.js type=text/javascript
+	body
+		div class=`modal hide fade` role=dialog id=modify-task
+			div class=modal-header
+				button type=button class=close data-dismiss=modal aria-hidden=true | &times;
+				h4 | 修改任务
+			div class=modal-body
+				input id=new-password type=text placeholder=`密码修改为...`
+				div class=fix
+					textarea id=task-textarea placeholder=`文本数据...`
+			div class=modal-footer
+				a href=javascript:clickSaveTask() class=`btn btn-primary` | 保存
+				a href=# data-dismiss=modal aria-hidden=true class=btn | 取消
+		div
+			div class=action-bar
+				a href=#modify-task class=`btn btn-primary` data-toggle=modal | 修改任务
+				|  
+				div class=btn-group 
+					a class=`btn dropdown-toggle` data-toggle=dropdown href=# 
+						| 导出 
+						span class=caret
+					ul class=dropdown-menu
+						li
+							a href=export?status=success | 成功的
+						li
+							a href=export?status=failure | 失败的
+						li
+							a href=export?status=rest | 未完成的
+						li class=divider
+						li
+							a href=export | 全部
+
+			table class=`table table-bordered table-striped`
+				thead
+					tr
+						th | 编号
+						th | 邮箱
+						th | 密码
+						th | 新密码
+						th | 状态
+						th | 备注
+				tbody id=task-body
+					tr
+						td | 1
+						td | xxx@xxx.com
+						td | abc123
+						td | cde456
+						td | 登录中
+						td | 无
+					tr
+						td | 1
+						td | xxx@xxx.com
+						td | abc123
+						td | cde456
+						td | 登录中
+						td | 无
+					tr
+						td | 1
+						td | xxx@xxx.com
+						td | abc123
+						td | cde456
+						td | 登录中
+						td | 无
+					tr
+						td | 1
+						td | xxx@xxx.com
+						td | abc123
+						td | cde456
+						td | 登录中
+						td | 无
+					tr
+						td | 1
+						td | xxx@xxx.com
+						td | abc123
+						td | cde456
+						td | 登录中
+						td | 无
+					tr
+						td | 1
+						td | xxx@xxx.com
+						td | abc123
+						td | cde456
+						td | 登录中
+						td | 无

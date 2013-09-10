@@ -1,0 +1,23 @@
+body {
+	max-width: 680px;
+	margin: 40px auto;
+	font-family: 'Microsoft Yahei';
+}
+
+.btn {
+	min-width: 60px;
+}
+
+.fix {
+	padding-right: 14px;
+}
+
+.fix > textarea {
+	min-height: 200px;
+	width: 100%;
+	margin: 0;
+}
+
+.action-bar {
+	margin-bottom: 25px;
+}
